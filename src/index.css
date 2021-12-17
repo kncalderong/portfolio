@@ -154,7 +154,13 @@ Work
 }
 .inactive {
   transition: transform 0.3s ease-out;
-  transform: translateY(314px);
+  transform: translateY(304px);
+}
+.card-hidden {
+  opacity: 0;
+}
+.card-showed {
+  opacity: 1;
 }
 
 /* 

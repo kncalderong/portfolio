@@ -1,41 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { useGlobalContext } from "../context";
 import { Link } from "react-router-dom";
+import data from "../data";
 
 const ReactProjects = () => {
   const hello = useGlobalContext();
+
   return (
     <article className="react-projects">
       <h3>React Projects</h3>
       <div className="cards-container">
-        <div
-          className="card"
-          style={{
-            backgroundImage:
-              "url(http://adminassets.devops.arabiaweather.com/sites/default/files/field/image/mountains.jpg)",
-          }}
-        >
-          <div className="content active">
-            <h4>First project </h4>
-            <p className="desc-project">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis corporis aliquam sapiente, nulla praesentium
-            </p>
-            <a
-              href="https://google.com"
-              class="btn project-dir"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Go to project
-            </a>
-          </div>
-        </div>
+        {data.map((item) => {
+          return <ReactProjectsItem key={item.id} {...item} />;
+        })}
       </div>
     </article>
   );
 };
 
-const ReactProjectsItem = () => {};
+const ReactProjectsItem = ({ id, name, img, info, url }) => {
+  return (
+    <div
+      className="card"
+      style={{
+        backgroundImage: img,
+      }}
+    >
+      <div className="content active">
+        <h4>{name} </h4>
+        <p className="desc-project card-showed">{info}</p>
+        <a
+          href={url}
+          className="btn project-dir card-showed"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Go to project
+        </a>
+      </div>
+    </div>
+  );
+};
 
 export default ReactProjects;

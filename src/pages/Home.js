@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <Navbar />
       <main>
-        <section id="welcome-section" class="welcome-section">
+        <section id="welcome-section" className="welcome-section">
           <h1>Hi, I'm Kevin Nicolas Calderon</h1>
           <p>a developer</p>
         </section>
