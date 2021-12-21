@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "../context";
 import { Link } from "react-router-dom";
-import data from "../data";
+import data from "../data/projects";
 
 const ReactProjects = () => {
   const hello = useGlobalContext();

@@ -121,6 +121,7 @@ Work
   font-weight: 10;
   font-size: 2rem;
 }
+
 /***********React projects**********/
 
 .react-projects {
@@ -185,6 +186,36 @@ Work
   opacity: 1;
 }
 
+/***********React Mini-projects (Components)**********/
+.mini-projects {
+  padding: 2.2rem;
+}
+.collage-container {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 874px;
+  margin: 0 auto;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+.item-collage {
+  min-height: 170px;
+  position: relative;
+  padding: 12px;
+  overflow: hidden;
+}
+.item-collage h3 {
+  max-height: 66px;
+  background-color: black;
+  color: white;
+  font-weight: 400;
+  padding: 5px;
+  font-size: 1.1rem;
+  max-width: 120px;
+  text-align: center;
+  margin: 0 auto;
+}
 /* 
 ====== 
 Contact
@@ -257,6 +288,10 @@ Projects page
 @media (max-width: 767px) {
   .cards-container {
     grid-template-columns: 1fr;
+  }
+  .react-projects,
+  .mini-projects {
+    padding: 40px 0;
   }
 }
 
