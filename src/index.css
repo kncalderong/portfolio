@@ -122,11 +122,12 @@ Work
   font-size: 2rem;
 }
 
-/***********React projects**********/
-
-.react-projects {
+.react-projects,
+.mini-projects,
+.data-projects {
   padding: 2.2rem;
 }
+/***********React projects**********/
 .cards-container {
   display: grid;
   grid-gap: 1rem;
@@ -187,9 +188,6 @@ Work
 }
 
 /***********React Mini-projects (Components)**********/
-.mini-projects {
-  padding: 2.2rem;
-}
 .collage-container {
   display: grid;
   grid-gap: 1rem;
@@ -215,6 +213,78 @@ Work
   max-width: 120px;
   text-align: center;
   margin: 0 auto;
+}
+
+/***********Data visualization projects**********/
+
+.dv-container {
+  position: relative;
+  /*it has to have height*/
+  height: 480px;
+  width: 700px;
+  margin: 0 auto;
+}
+.dv-item p {
+  font-size: 1rem;
+  max-width: 500px;
+  padding: 10px;
+}
+.dv-img {
+  width: 500px;
+  height: 300px;
+  margin-bottom: 12px;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 200px;
+  transform: translateY(-50%);
+  background: hsl(210, 22%, 49%);
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-color: transparent;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+.prev:hover,
+.next:hover {
+  background: hsl(21, 62%, 45%);
+}
+
+.dv-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /*by default all in 0 opacity*/
+  transition: all 0.3s linear;
+}
+.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+.lastSlide {
+  transform: translateX(-100%);
+}
+.nextSlide {
+  transform: translateX(100%);
 }
 /* 
 ====== 
@@ -290,11 +360,31 @@ Projects page
     grid-template-columns: 1fr;
   }
   .react-projects,
-  .mini-projects {
+  .mini-projects,
+  .data-projects {
     padding: 40px 0;
+  }
+  .dv-img {
+    width: 480px;
+    height: 300px;
+  }
+  .dv-container {
+    width: 580px;
   }
 }
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
 @media (max-width: 600px) {
+  .dv-img {
+    width: 400px;
+  }
+  .dv-container {
+    width: 480px;
+  }
+  .prev {
+    left: 20px;
+  }
+  .next {
+    right: 20px;
+  }
 }
