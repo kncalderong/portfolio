@@ -8,7 +8,9 @@ const ReactProjects = () => {
 
   return (
     <article className="react-projects">
-      <h3 className="subtitle">React Projects :</h3>
+      <h3 className="subtitle">
+        <span>/</span>React Projects :
+      </h3>
       <div className="cards-container">
         {data.slice(0, 4).map((item) => {
           return <ReactProjectsItem key={item.id} {...item} />;

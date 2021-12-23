@@ -16,7 +16,9 @@ const positions = [
 const MiniProjects = () => {
   return (
     <article className="mini-projects">
-      <h3 className="subtitle">React Mini-Projects (Components) :</h3>
+      <h3 className="subtitle">
+        <span>/</span>React Mini-Projects (Components) :
+      </h3>
       <div className="collage-container">
         {data.slice(0, 7).map((item) => {
           return <MiniProjectItem {...item} key={item.id} />;

@@ -121,12 +121,19 @@ Work
   font-weight: 10;
   font-size: 2rem;
 }
+.subtitle span {
+  font-size: 2.5rem;
+  color: #f0b459;
+  font-weight: 1000;
+  margin-right: 1rem;
+}
 
 .react-projects,
 .mini-projects,
 .data-projects {
   padding: 2.2rem;
 }
+
 /***********React projects**********/
 .cards-container {
   display: grid;
@@ -223,6 +230,7 @@ Work
   height: 480px;
   width: 700px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .dv-item p {
   font-size: 1rem;
@@ -338,19 +346,73 @@ Projects page
   color: black;
   min-height: 100vh;
 }
+.btn-container {
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.filter-btn {
+  background: transparent;
+  border-color: transparent;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  padding: 0.375rem 0.75rem;
+  /* color: #c59d5f; */
+  cursor: pointer;
+  transition: all 0.3s linear;
+  border-radius: 0.25rem;
+}
+.filter-btn:hover {
+  background: #f0b459;
+}
+.projects-container {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+}
+.project-item {
+  display: grid;
+  gap: 1rem 2rem;
+  max-width: 5rem;
+}
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
+  .projects-container {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+  }
+  .project-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+  }
 }
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
+  .project-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+  }
 }
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .project-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
   }
 }
 
