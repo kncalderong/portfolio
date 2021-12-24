@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import data from "../data/projects";
 
 const ReactProjects = () => {
-  const hello = useGlobalContext();
+  const { filterProjects } = useGlobalContext();
 
   return (
     <article className="react-projects">
@@ -17,7 +17,13 @@ const ReactProjects = () => {
         })}
       </div>
 
-      <Link to="/projects" className="show-all">
+      <Link
+        to="/projects"
+        className="show-all"
+        onClick={() => {
+          filterProjects("React-projects");
+        }}
+      >
         Show all
       </Link>
     </article>
@@ -34,7 +40,7 @@ const ReactProjectsItem = ({ id, name, img, info, url }) => {
     <div
       className="card"
       style={{
-        backgroundImage: img,
+        backgroundImage: `url(${img})`,
       }}
       onMouseOver={handleActive}
       onMouseOut={handleActive}

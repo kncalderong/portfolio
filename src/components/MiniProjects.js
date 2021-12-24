@@ -1,6 +1,7 @@
 import React from "react";
 import data from "../data/mini-projects";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../context";
 
 const positions = [
   "",
@@ -14,6 +15,7 @@ const positions = [
 ];
 
 const MiniProjects = () => {
+  const { filterProjects } = useGlobalContext();
   return (
     <article className="mini-projects">
       <h3 className="subtitle">
@@ -24,7 +26,13 @@ const MiniProjects = () => {
           return <MiniProjectItem {...item} key={item.id} />;
         })}
       </div>
-      <Link to="/projects" className="show-all">
+      <Link
+        to="/projects"
+        className="show-all"
+        onClick={() => {
+          filterProjects("Mini-projects");
+        }}
+      >
         Show All
       </Link>
     </article>
@@ -37,7 +45,7 @@ const MiniProjectItem = ({ url, id, img, name }) => {
       href={url}
       className="item-collage"
       style={{
-        backgroundImage: img,
+        backgroundImage: `url(${img})`,
         gridArea: positions[id],
       }}
       target="_blank"

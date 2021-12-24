@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import data from "../data/dv-projects";
+import { useGlobalContext } from "../context";
 
 const DataProjects = () => {
+  const { filterProjects } = useGlobalContext();
   const [index, setIndex] = useState(0);
   const [projects, setProjects] = useState(data);
 
@@ -62,7 +64,13 @@ const DataProjects = () => {
           <FiChevronRight size={30} onClick={() => setIndex(index + 1)} />
         </button>
       </div>
-      <Link to="/projects" className="show-all">
+      <Link
+        to="/projects"
+        className="show-all"
+        onClick={() => {
+          filterProjects("Data-visualization");
+        }}
+      >
         Show All
       </Link>
     </article>

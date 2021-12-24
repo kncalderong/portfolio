@@ -43,6 +43,21 @@ a {
   width: 150px;
   text-align: center;
 }
+.back-home {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: 900;
+  position: absolute;
+  background-color: #f0b459;
+  width: 50px;
+  margin-top: 30px;
+  right: 20px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
 /* 
 ====== 
 Navbar
@@ -345,6 +360,7 @@ Projects page
 .projects-page {
   color: black;
   min-height: 100vh;
+  padding-bottom: 3rem;
 }
 .btn-container {
   margin-bottom: 4rem;
@@ -368,7 +384,10 @@ Projects page
 .filter-btn:hover {
   background: #f0b459;
 }
-.projects-container {
+.filter-active {
+  background: #f0b459;
+}
+.projects-page-container {
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
@@ -376,19 +395,80 @@ Projects page
   gap: 3rem 2rem;
   justify-items: center;
 }
-.project-item {
+.project-page-item {
   display: grid;
   gap: 1rem 2rem;
   max-width: 5rem;
 }
+.image-page {
+  object-fit: cover; /*to adjust the image size*/
+  height: 200px;
+  width: 100%;
+  display: block;
+}
+.project-page-info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px dotted hsl(210, 22%, 49%);
+  align-items: baseline;
+}
+.project-page-info h4 {
+  margin-bottom: 0.5rem;
+}
+.project-page-info a {
+  color: #c59d5f;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.project-page-text {
+  margin-bottom: 0;
+  padding-top: 1rem;
+  font-size: 1rem;
+}
+
+/* 
+====== 
+Error page
+======
+*/
+
+.error-page {
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 20vh;
+}
+
+.error-container {
+  display: flex;
+  min-height: 15vh;
+  flex-direction: column;
+  align-items: center;
+}
+.error-container p {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.error-btn {
+  display: block;
+  margin: 20px auto 20px auto;
+  background-color: #f0b459;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  width: 150px;
+  text-align: center;
+  border-radius: 0.25rem;
+}
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
-  .projects-container {
+  .projects-page-container {
     width: 95vw;
     grid-template-columns: 1fr 1fr;
   }
-  .project-item {
+  .project-page-item {
     grid-template-columns: 225px 1fr;
     gap: 0 1.25rem;
     max-width: 40rem;
@@ -397,7 +477,7 @@ Projects page
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
-  .project-item {
+  .project-page-item {
     grid-template-columns: 225px 1fr;
     gap: 0 1.25rem;
     max-width: 40rem;
@@ -409,7 +489,7 @@ Projects page
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  .project-item {
+  .project-page-item {
     grid-template-columns: 225px 1fr;
     gap: 0 1.25rem;
     max-width: 40rem;
@@ -433,6 +513,14 @@ Projects page
   .dv-container {
     width: 580px;
   }
+  .image-page {
+    height: 150px;
+  }
+  .project-page-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+  }
 }
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
@@ -448,5 +536,9 @@ Projects page
   }
   .next {
     right: 20px;
+  }
+  .project-page-info h4,
+  .project-page-info a {
+    font-size: 0.9rem;
   }
 }
