@@ -65,25 +65,72 @@ Navbar
 */
 
 #navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 86px;
   background: #f0b459;
   z-index: 10;
 }
-.nav-list {
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  padding: 1rem;
+}
+.nav-toggle:hover {
+  transform: rotate(90deg);
+}
+.links {
   display: flex;
   margin-right: 2em;
+  flex-direction: column;
+  width: 100%;
 }
-.nav-list a {
+.links a {
   display: block;
   padding: 1.1em;
   font-weight: bold;
+  transition: all 0.3s linear;
+}
+.links a:hover {
+  background-color: #f0b459;
+}
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  background-color: #fff;
+}
+@media (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+    background-color: #f0b459;
+    transition: all 0;
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /* 
@@ -131,7 +178,7 @@ Work
 }
 .subtitle {
   padding: 0 0 0 100px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   /* font-family: "Lobster", cursive; */
   font-weight: 10;
   font-size: 2rem;
@@ -392,7 +439,7 @@ Projects page
   margin: 0 auto;
   max-width: 1170px;
   display: grid;
-  gap: 3rem 2rem;
+  gap: 3rem 5rem;
   justify-items: center;
 }
 .project-page-item {
@@ -414,11 +461,12 @@ Projects page
 }
 .project-page-info h4 {
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 .project-page-info a {
   color: #c59d5f;
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .project-page-text {
   margin-bottom: 0;
@@ -465,7 +513,7 @@ Error page
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .projects-page-container {
-    width: 95vw;
+    width: 85vw;
     grid-template-columns: 1fr 1fr;
   }
   .project-page-item {
@@ -500,11 +548,15 @@ Error page
 @media (max-width: 767px) {
   .cards-container {
     grid-template-columns: 1fr;
+    padding: 2.5rem;
   }
   .react-projects,
   .mini-projects,
   .data-projects {
     padding: 40px 0;
+  }
+  .collage-container {
+    padding: 2.5rem;
   }
   .dv-img {
     width: 480px;
