@@ -9,7 +9,10 @@ const Home = () => {
       <main>
         <section id="welcome-section" className="welcome-section">
           <h1>Hi, I'm Kevin Nicolas Calderon</h1>
-          <p>a developer</p>
+          <p>
+            A front-end developer (ReactJs) who enjoy the process of learning
+            and improving as a way to live
+          </p>
         </section>
         <Work />
         <Contact />

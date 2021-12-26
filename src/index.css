@@ -151,15 +151,20 @@ Welcome
 h1 {
   font-size: 2em;
 }
+.welcome-section h1 {
+  padding: 1rem;
+}
 h1,
 h2 {
   text-align: center;
 }
 .welcome-section p {
   font-style: italic;
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: #f0b459;
   text-align: center;
+  width: 60vw;
+  padding-top: 2rem;
 }
 
 /* 
@@ -211,6 +216,9 @@ Work
   position: relative;
   padding: 12px;
   overflow: hidden;
+  background-size: cover;
+  background-color: #f5cb8b;
+  transition: transform 0.3s ease-out;
 }
 .content {
   display: flex;
@@ -534,6 +542,13 @@ Error page
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
+  .welcome-section h1 {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+  }
+  .welcome-section p {
+    font-size: 1.5rem;
+  }
   .cards-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -546,6 +561,21 @@ Error page
 
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
+  .welcome-section h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  .welcome-section p {
+    font-size: 1.3rem;
+  }
+  .links a {
+    font-size: 1.3rem;
+  }
+  .contact-section h2 {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+  }
+
   .cards-container {
     grid-template-columns: 1fr;
     padding: 2.5rem;

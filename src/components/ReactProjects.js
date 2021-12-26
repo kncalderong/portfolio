@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "../context";
 import { Link } from "react-router-dom";
 import data from "../data/projects";
@@ -32,16 +32,20 @@ const ReactProjects = () => {
 
 const ReactProjectsItem = ({ id, name, img, info, url }) => {
   const [active, setActive] = useState(false);
+  const cardRef = useRef(null);
+  useEffect(() => {
+    cardRef.current.style.backgroundImage = `url(${img})`;
+  }, []);
+
   const handleActive = () => {
+    cardRef.current.style.backgroundImage = active ? `url(${img})` : null;
     setActive(!active);
   };
 
   return (
     <div
       className="card"
-      style={{
-        backgroundImage: `url(${img})`,
-      }}
+      ref={cardRef}
       onMouseOver={handleActive}
       onMouseOut={handleActive}
     >
