@@ -218,6 +218,7 @@ Work
   overflow: hidden;
   background-size: cover;
   background-color: #f5cb8b;
+  background-position: center;
   transition: transform 0.3s ease-out;
 }
 .content {
