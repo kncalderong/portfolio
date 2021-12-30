@@ -36,12 +36,13 @@ a {
 }
 .show-all {
   display: block;
-  margin: 20px auto 20px auto;
+  margin: 2rem auto 2rem auto;
   background-color: #f0b459;
   font-weight: 900;
   padding: 1.2rem;
   width: 150px;
   text-align: center;
+  border-radius: 0.25rem;
 }
 .back-home {
   display: flex;
@@ -183,13 +184,13 @@ Work
 }
 .subtitle {
   padding: 0 0 0 100px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   /* font-family: "Lobster", cursive; */
   font-weight: 10;
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 .subtitle span {
-  font-size: 2.5rem;
+  /* font-size: 2.5rem; */
   color: #f0b459;
   font-weight: 1000;
   margin-right: 1rem;
@@ -198,21 +199,21 @@ Work
 .react-projects,
 .mini-projects,
 .data-projects {
-  padding: 2.2rem;
+  padding: 2.2rem 4.2rem 0 4.2rem;
 }
 
 /***********React projects**********/
 .cards-container {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 3rem;
   padding: 1rem;
-  max-width: 1024px;
-  margin: 0 auto;
+  max-width: 974px;
+  margin: 0 auto 2rem auto;
   grid-auto-rows: auto;
   grid-template-columns: repeat(4, 1fr);
 }
 .card {
-  border: solid gray 0.175rem;
+  /* border: solid gray 0.175rem; */
   min-height: 392px;
   position: relative;
   padding: 12px;
@@ -221,6 +222,8 @@ Work
   background-color: #f5cb8b;
   background-position: center;
   transition: transform 0.3s ease-out;
+  box-shadow: 6px 6px 10px rgb(0 0 0 / 60%);
+  border-radius: 0.25rem;
 }
 .content {
   display: flex;
@@ -235,6 +238,8 @@ Work
   font-weight: 500;
   padding: 5px;
   font-size: 1.1rem;
+  border-radius: 0.25rem;
+  display: none;
 }
 .card a {
   background-color: black;
@@ -248,7 +253,7 @@ Work
   margin: 10px;
   padding: 1rem;
   font-size: 0.9rem;
-  max-height: 172px;
+  max-height: 192px;
   overflow: hidden;
   max-width: 192px;
 }
@@ -270,9 +275,9 @@ Work
 /***********React Mini-projects (Components)**********/
 .collage-container {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   padding: 1rem;
-  max-width: 874px;
+  max-width: 774px;
   margin: 0 auto;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(4, 1fr);
@@ -282,17 +287,25 @@ Work
   position: relative;
   padding: 12px;
   overflow: hidden;
+  background-position: center;
+  /* background-size: 400px; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 60%);
+  border-radius: 0.25rem;
+  border: solid gray 1px;
 }
 .item-collage h3 {
   max-height: 66px;
   background-color: black;
   color: white;
-  font-weight: 400;
+  font-weight: 500;
   padding: 5px;
   font-size: 1.1rem;
   max-width: 120px;
   text-align: center;
   margin: 0 auto;
+  border-radius: 0.25rem;
 }
 
 /***********Data visualization projects**********/
@@ -590,6 +603,9 @@ Error page
   }
   .collage-container {
     padding: 2.5rem;
+  }
+  .item-collage h3 {
+    font-size: 0.8rem;
   }
   .dv-img {
     width: 480px;

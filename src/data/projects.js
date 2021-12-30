@@ -55,6 +55,20 @@ const projects = [
     info: "This app involves the use of timing on the code and can be used for study or training time management",
     url: "https://kn-training-clock-react.netlify.app/",
   },
+  {
+    id: 9,
+    name: "Market Cart (Reduce)",
+    img: "./projects_images/cart.png",
+    info: "this project market cart uses Reduce to handle the state flow in a more controlled way",
+    url: "https://kn-cart-reactjsproject.netlify.app/",
+  },
+  {
+    id: 10,
+    name: "Alternative Random Text",
+    img: "./projects_images/lorem.png",
+    info: "It's an application that generates random text alternative to Lorem Ipsum",
+    url: "https://kn-loremtextgenerator-reactjsproject.netlify.app/",
+  },
 ];
 
 export default projects;
