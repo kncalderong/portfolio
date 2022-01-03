@@ -52,7 +52,7 @@ const MiniProjectItem = ({ url, id, img, name }) => {
       target="_blank"
       rel="noreferrer"
     >
-      <h3>{name}</h3>
+      <h3 className="project-title">{name}</h3>
     </a>
   );
 };

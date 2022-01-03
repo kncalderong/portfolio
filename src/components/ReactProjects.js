@@ -49,8 +49,17 @@ const ReactProjectsItem = ({ id, name, img, info, url }) => {
       onMouseOver={handleActive}
       onMouseOut={handleActive}
     >
+      <a
+        href={url}
+        target="_blank"
+        rel="noreferrer"
+        className={`project-title`}
+        style={active ? { display: "none" } : null}
+      >
+        {name}
+      </a>
       <div className={`content ${active ? "active" : "inactive"}`}>
-        <h4>{name} </h4>
+        {/* <h4 className={`${active ? "card-showed" : "card-hidden"}`}>{name} </h4> */}
         <p className={`desc-project ${active ? "card-showed" : "card-hidden"}`}>
           {info}
         </p>

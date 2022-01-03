@@ -1,11 +1,12 @@
 const projects = [
   {
     id: 1,
-    name: "Menu",
-    img: "./projects_images/menu1.png",
-    info: "It's a menu UI, with a friendly way to show available products, rendered and filtered dynamically",
-    url: "https://kn-generalmenu-reactjsproject.netlify.app/",
+    name: "Cocktails (API Consumption)",
+    img: "./projects_images/cocktails2.png",
+    info: "This project includes a react-router and context React structure, and all data comes from the API: www.thecocktaildb.com/api",
+    url: "https://cocktails-reactproject-continousdeploy.netlify.app/",
   },
+
   {
     id: 2,
     name: "Drumpad",
@@ -15,10 +16,10 @@ const projects = [
   },
   {
     id: 3,
-    name: "Cocktails (API Consumption)",
-    img: "./projects_images/cocktails2.png",
-    info: "This project includes a react-router and context React structure, and all data comes from the API: www.thecocktaildb.com/api",
-    url: "https://cocktails-reactproject-continousdeploy.netlify.app/",
+    name: "Menu",
+    img: "./projects_images/menu1.png",
+    info: "It's a menu UI, with a friendly way to show available products, rendered and filtered dynamically",
+    url: "https://kn-generalmenu-reactjsproject.netlify.app/",
   },
   {
     id: 4,

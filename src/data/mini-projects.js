@@ -43,11 +43,12 @@ const miniProjects = [
   },
   {
     id: 7,
-    name: "Navbar",
-    img: "./projects_images/navbar.png",
-    url: "https://kn-navbar-reactjsproject.netlify.app/",
-    info: "This navigation bar component is responsive and allows a greater UX to navigate on the pages",
+    name: "Birthday Reminder",
+    img: "./projects_images/birthday.png",
+    url: "https://kn-birthday-reminder-reactjs-project.netlify.app/",
+    info: "This UI can be used to set a birthday reminder of a group of mates",
   },
+
   {
     id: 8,
     name: "Reviews",
@@ -57,10 +58,10 @@ const miniProjects = [
   },
   {
     id: 9,
-    name: "Birthday Reminder",
-    img: "./projects_images/birthday.png",
-    url: "https://kn-birthday-reminder-reactjs-project.netlify.app/",
-    info: "This UI can be used to set a birthday reminder of a group of mates",
+    name: "Navbar",
+    img: "./projects_images/navbar.png",
+    url: "https://kn-navbar-reactjsproject.netlify.app/",
+    info: "This navigation bar component is responsive and allows a greater UX to navigate on the pages",
   },
 ];
 

@@ -48,8 +48,14 @@ const DataProjects = () => {
           }
           return (
             <div className={`dv-item ${position}`} key={id}>
-              <a href={url} target="_blank" rel="noreferrer">
-                <img src={img} alt="rise of nations" className="dv-img" />
+              <a
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+                style={{ backgroundImage: `url(${img})` }}
+                className="dv-img"
+              >
+                {/* <img id="dv-img" src={img} alt={name} className="dv-img" /> */}
               </a>
               <h3>{name}</h3>
               <p>{info}</p>
@@ -57,11 +63,11 @@ const DataProjects = () => {
           );
         })}
 
-        <button className="prev">
-          <FiChevronLeft size={30} onClick={() => setIndex(index - 1)} />
+        <button className="prev" onClick={() => setIndex(index - 1)}>
+          <FiChevronLeft size={30} />
         </button>
-        <button className="next">
-          <FiChevronRight size={30} onClick={() => setIndex(index + 1)} />
+        <button className="next" onClick={() => setIndex(index + 1)}>
+          <FiChevronRight size={30} />
         </button>
       </div>
       <Link
