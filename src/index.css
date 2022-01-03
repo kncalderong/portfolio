@@ -613,7 +613,7 @@ Error page
   }
   .contact-section h2 {
     font-size: 2.2rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 
   .cards-container {
@@ -654,11 +654,15 @@ Error page
 
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
 @media (max-width: 600px) {
+  .subtitle {
+    padding: 0;
+    text-align: center;
+  }
   .dv-img {
     width: 400px;
   }
   .dv-container {
-    width: 440px;
+    width: 90vw;
   }
   .prev {
     left: 20px;
@@ -666,8 +670,21 @@ Error page
   .next {
     right: 20px;
   }
+  .contact-section h2 {
+    font-size: 1.8rem;
+    margin-top: 4rem;
+  }
   .project-page-info h4,
   .project-page-info a {
+    font-size: 0.8rem;
+  }
+  .project-page-item {
+    grid-template-columns: 175px 150px;
+    gap: 0 1.25rem;
+    max-width: 390px;
+    overflow: hidden;
+  }
+  .btn-container button {
     font-size: 0.9rem;
   }
 }
