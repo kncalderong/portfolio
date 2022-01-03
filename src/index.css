@@ -629,7 +629,7 @@ Error page
     padding: 2.5rem;
   }
   .item-collage h3 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .dv-img {
     width: 480px;
@@ -645,7 +645,10 @@ Error page
   .project-page-item {
     grid-template-columns: 225px 1fr;
     gap: 0 1.25rem;
-    max-width: 40rem;
+    max-width: 420px;
+  }
+  .project-page-text {
+    font-size: 0.8rem;
   }
 }
 
@@ -655,7 +658,7 @@ Error page
     width: 400px;
   }
   .dv-container {
-    width: 480px;
+    width: 440px;
   }
   .prev {
     left: 20px;
