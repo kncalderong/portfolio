@@ -10,8 +10,10 @@ const Home = () => {
         <section id="welcome-section" className="welcome-section">
           <h1>Hi, I'm Kevin Nicolas Calderon</h1>
           <p>
-            A front-end developer (ReactJs) who enjoy the process of learning
-            and improving as a way to live
+            I'm a front-end developer (ReactJs), who takes special care of the
+            details, functionality, and good practices in coding. I'm always
+            improving my programming skills and I'm pleased to invite you to
+            take a look at my job
           </p>
         </section>
         <Work />
