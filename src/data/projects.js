@@ -80,6 +80,13 @@ const projects = [
   },
   {
     id: 12,
+    name: "Time Tracking",
+    img: "./projects_images/time-tracking.png",
+    info: "A lovely design to show how much time are you investing in different fields",
+    url: "https://kn-time-tracking-react.netlify.app/",
+  },
+  {
+    id: 13,
     name: "Alternative Random Text",
     img: "./projects_images/lorem.png",
     info: "It's an application that generates random text alternative to Lorem Ipsum",
