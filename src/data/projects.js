@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     name: "SpaceTurism App",
     img: "./projects_images/space.png",
-    info: "This project was built following a Figma design, taking special care of details, and now is a completely functional web App",
+    info: "This multipage project was built with React-Router following a Figma design, taking special care of details",
     url: "https://kn-space-tourism-app.netlify.app/",
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     id: 3,
     name: "Cocktails (API Consumption)",
     img: "./projects_images/cocktails2.png",
-    info: "This project includes a react-router and context React structure, and all data comes from the API: www.thecocktaildb.com/api",
+    info: "This project makes use of the React-context structure and handles asynchronous data from the API: www.thecocktaildb.com/api",
     url: "https://cocktails-reactproject-continousdeploy.netlify.app/",
   },
 
@@ -42,6 +42,13 @@ const projects = [
     img: "./projects_images/palette.png",
     info: "This is a tool designed to generate a 20 color gradient, really useful for the setup of the inital CSS file",
     url: "https://kn-colorgenerator-reactjsproject.netlify.app/",
+  },
+  {
+    id: 15,
+    name: "Interactive Comments",
+    img: "./projects_images/interactiveComments.png",
+    info: "This is a MERN full-stack application that dynamically renders comments and their replies, allows editing, updating score, deleting, and so on...",
+    url: "https://kn-interactive-comments-mern.onrender.com/",
   },
   {
     id: 7,
@@ -92,6 +99,13 @@ const projects = [
     info: "It's an application that generates random text alternative to Lorem Ipsum",
     url: "https://kn-loremtextgenerator-reactjsproject.netlify.app/",
   },
+  {
+    id: 14,
+    name: "IP tracker",
+    img: "./projects_images/ipTracker.png",
+    info: "It's an application that shows the location of a given IP Address (the address can be pointed to internet provider servers)",
+    url: "https://kn-ip-tracker-react.netlify.app/",
+  }
 ];
 
 export default projects;
