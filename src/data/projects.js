@@ -21,6 +21,13 @@ const projects = [
     info: "This project makes use of the React-context structure and handles asynchronous data from the API: www.thecocktaildb.com/api",
     url: "https://cocktails-reactproject-continousdeploy.netlify.app/",
   },
+  {
+    id: 16,
+    name: "Entertainment App",
+    img: "./projects_images/entertainmentApp.png",
+    info: "A full-stack application using Express and React, the state management was handled by Redux Toolkit",
+    url: "https://kn-entertainment-web-app.onrender.com/",
+  },
 
   {
     id: 4,
