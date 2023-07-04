@@ -23,7 +23,7 @@ const Wrapper = styled.section`
 .profile-info, .profile-info-2 {
   position: absolute;
   left: 50%;
-  top: 55%;
+  top: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: opacity 1200ms ease-in;
@@ -41,6 +41,12 @@ const Wrapper = styled.section`
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.4
+}
+
+@media (max-width: 1024px) {
+  .profile-info, .profile-info-2 {
+    top: 55%;
+  }
 }
 
 `

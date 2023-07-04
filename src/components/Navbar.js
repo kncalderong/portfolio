@@ -34,7 +34,7 @@ const Navbar = () => {
         {/* second the content (links..), of the nav*/}
         <div className="links-container" ref={linksContainerRef}>
           <ul className="links" ref={linksRef}>
-            <li>
+            <li className="link">
               <a
                 href="#welcome-section"
                 onClick={() => {
@@ -43,8 +43,9 @@ const Navbar = () => {
               >
                 About
               </a>
+              <div className="hover-line-navbar"></div>
             </li>
-            <li>
+            <li className="link">
               <a
                 href="#work-section"
                 onClick={() => {
@@ -53,8 +54,9 @@ const Navbar = () => {
               >
                 Work
               </a>
+              <div className="hover-line-navbar"></div>
             </li>
-            <li>
+            <li className="link">
               <a
                 href="#contact"
                 onClick={() => {
@@ -63,6 +65,7 @@ const Navbar = () => {
               >
                 Contact
               </a>
+              <div className="hover-line-navbar"></div>
             </li>
           </ul>
         </div>

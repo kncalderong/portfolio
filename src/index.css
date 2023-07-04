@@ -86,7 +86,7 @@ Navbar
   transition: all 0.3s linear;
   cursor: pointer;
   padding: 1rem;
-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 .nav-toggle-rotate {
   transform: rotate(90deg);
@@ -112,9 +112,23 @@ transform: rotate(0deg);
   transition: all 0.3s linear;
   background-color: #fff;
 }
+.link {
+  position: relative
+}
+.hover-line-navbar {
+  position: absolute;
+  width: 0;
+  transition: width 500ms ease-in-out;
+  height: 3%;
+  background-color: #000;
+  bottom: 10%;
+}
+
+.link:hover > .hover-line-navbar {
+  width: 100%;
+}
 @media (min-width: 800px) {
   .nav-center {
-    max-width: 1170px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -127,11 +141,11 @@ transform: rotate(0deg);
   .links-container {
     height: auto !important;
     background-color: #f0b459;
-    transition: all 0;
   }
   .links {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
   }
 }
 
