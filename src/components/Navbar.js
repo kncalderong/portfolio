@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <button
-            className="nav-toggle"
+            className={`${showLinks ? 'nav-toggle-rotate nav-toggle' : 'nav-toggle'}`}
             onClick={() => setShowLinks(!showLinks)}
           >
             <FaBars size={32} />
