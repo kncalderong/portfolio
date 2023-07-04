@@ -23,7 +23,7 @@ const Wrapper = styled.section`
 .profile-info, .profile-info-2 {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 55%;
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: opacity 1200ms ease-in;

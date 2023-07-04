@@ -34,7 +34,7 @@ const Profile = () => {
     })
   }, [toggled, numOfTiles, handleToggle])
   useEffect(() => {
-     console.log('this is loaded')
+
     anime({ //the animejs effect has to be added once the component has been mounted(the tiles one), that's the reason why we put tiles dependency in the dependencies array
       targets: ".tile",
       opacity: toggled ? 0 : 1,
@@ -43,7 +43,7 @@ const Profile = () => {
         from: index
       })
     })
-   }, [tiles, index])
+   }, [tiles, index, toggled])
   
   useEffect(() => {
     const handleResize = () => { //event listener to create the tiles dinamically according to sreen size
