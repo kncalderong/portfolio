@@ -5,6 +5,7 @@ import data from "../data/projects";
 
 const ReactProjects = () => {
   const { filterProjects } = useGlobalContext();
+  const numberOfProjects = document.body.clientWidth > 1440 ? 5 : 4
 
   return (
     <article className="react-projects">
@@ -12,7 +13,7 @@ const ReactProjects = () => {
         <span>/</span>React Projects :
       </h3>
       <div className="cards-container">
-        {data.slice(0, 4).map((item) => {
+        {data.slice(0, numberOfProjects).map((item) => {
           return <ReactProjectsItem key={item.id} {...item} />;
         })}
       </div>
