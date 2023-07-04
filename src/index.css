@@ -148,9 +148,11 @@ Welcome
   flex-direction: column;
   background-color: black;
   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  overflow: hidden;
+  position: relative;
 }
 h1 {
-  font-size: 2em;
+  font-size: 3em;
 }
 .welcome-section h1 {
   padding: 1rem;
@@ -161,11 +163,12 @@ h2 {
 }
 .welcome-section p {
   font-style: italic;
-  font-size: 1.1em;
+  font-size: 1.3em;
   color: #f0b459;
   text-align: center;
-  width: 60vw;
+  width: 100%;
   padding-top: 2rem;
+  font-weight: bold;
 }
 
 /* 
